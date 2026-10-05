@@ -36,6 +36,15 @@
     });
   });
 
+  const ccfCounts = { A: 0, B: 0, C: 0 };
+  document.querySelectorAll('.publications-section .badge.ccf').forEach((badge) => {
+    const rank = badge.textContent.trim().match(/^CCF ([ABC])$/)?.[1];
+    if (rank) ccfCounts[rank] += 1;
+  });
+  document.querySelectorAll('[data-ccf-count]').forEach((count) => {
+    count.textContent = ccfCounts[count.dataset.ccfCount];
+  });
+
   let savedLanguage;
   try {
     savedLanguage = localStorage.getItem('preferred-language');

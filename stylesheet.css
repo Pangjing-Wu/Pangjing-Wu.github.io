@@ -60,7 +60,14 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 16px;
   min-height: 52px;
+}
+
+.cv-download {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .language-switch {
@@ -256,6 +263,53 @@ h1 {
   color: #7162a6;
   font-size: .8em;
   font-weight: 800;
+}
+
+.ccf-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.ccf-stat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 8px;
+  padding: 12px 16px;
+  border-left: 4px solid currentColor;
+}
+
+.ccf-stat.rank-1 {
+  background: #fdebea;
+  color: #aa2e25;
+}
+
+.ccf-stat.rank-2 {
+  background: #fff1d9;
+  color: #976000;
+}
+
+.ccf-stat.rank-3 {
+  background: #e9f2fb;
+  color: #246392;
+}
+
+.ccf-stat-label {
+  flex-basis: 100%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ccf-stat strong {
+  font-size: 30px;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.ccf-stat-unit {
+  font-size: 13px;
 }
 
 .high-citation-paper {
@@ -490,6 +544,14 @@ footer p {
   .publication {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+
+  .ccf-stats {
+    gap: 8px;
+  }
+
+  .ccf-stat {
+    padding: 10px 12px;
   }
 
   footer {
